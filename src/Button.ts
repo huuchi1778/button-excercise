@@ -6,6 +6,7 @@ import {ButtonStyle} from './ButtonStyle';
 export class CustomButton extends LitElement {
   @property({type: String}) class = 'normal'; // normal is the default
 
+  // error checking for invalid class name
   static styles = css`${ButtonStyle}`;
 
   render() {
