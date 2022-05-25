@@ -4,12 +4,13 @@ import {ButtonStyle} from './ButtonStyle';
 
 @customElement('custom-button')
 export class CustomButton extends LitElement {
-  @property({type: String}) class = '';
+  @property({type: String}) class = 'normal'; // normal is the default
 
   static styles = css`${ButtonStyle}`;
+
   render() {
     return html`
-      <button class="${this.class}"><slot></slot></button>
+      <button class="${this.class}"><slot>Default text</slot></button>
     `;
   }
 }
